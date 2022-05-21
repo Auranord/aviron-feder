@@ -8,17 +8,15 @@
         </v-btn>
     </nuxt-link>
 
-    <!--<nuxt-link to="/login" >!-->
-        <v-btn v-if="!loggedin" text rounded class="my-2" @click.stop="loggedin = !loggedin">
+    <nuxt-link to="/login" >
+        <v-btn v-if="!loggedin" text rounded class="my-2" >
             Anmelden
         </v-btn>
-    <!--</nuxt-link>!-->
+    </nuxt-link>
 
-    <!--<nuxt-link to="/logout" >!-->
-        <v-btn v-if="loggedin" text rounded class="my-2" @click.stop="loggedin = !loggedin">
+        <v-btn v-if="loggedin" text rounded class="my-2" @click="logout">
             Ausloggen
         </v-btn>
-    <!--</nuxt-link>!-->
 
     <nuxt-link v-if="loggedin" to="/account" >
         <v-btn icon >
@@ -34,9 +32,21 @@
 export default {
     data () {
         return {
-            loggedin: true,
+            loggedin: false,
+        }
+    },
+    mounted() {
+        console.log(localStorage.getItem('Authorization'))
+        if(localStorage.getItem('Authorization') != null)
+            this.loggedin = true;
+    },
+    methods: {
+        logout() {
+            localStorage.removeItem('Authorization')
+            window.location.href = "/";
         }
     }
+    
 }
 </script>
 

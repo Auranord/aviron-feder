@@ -15,13 +15,13 @@
       </v-list>
     </v-navigation-drawer>
     
-    <v-app-bar :clipped-left="clipped" fixed app >
+    <v-app-bar :clipped-left="clipped" fixed app class="primary-darken">
 
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
 
       <nuxt-link to="/" >
-        <v-btn icon >
-          <v-icon>mdi-home</v-icon>
+        <v-btn icon size="28px" >
+          <v-icon size="28px" >mdi-home</v-icon>
         </v-btn>
       </nuxt-link>
       <v-toolbar-title> 
@@ -34,7 +34,6 @@
       <feder-session />
 
     </v-app-bar>
-
 
   </div>
 
