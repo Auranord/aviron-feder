@@ -1,3 +1,3 @@
-import Vue from "vue"
-import VueDummy from "vue-dummy"
+import Vue from 'vue'
+import VueDummy from 'vue-dummy'
 Vue.use(VueDummy)

@@ -5,7 +5,7 @@ export default {
   target: 'static',
 
   router: {
-    base: '/aviron-feder/'
+    base: '/aviron-feder/',
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -22,15 +22,10 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    
-  ],
+  css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    '~/plugins/v-dummy.js',
-    '~/plugins/vee-validate.js',
-  ],
+  plugins: ['~/plugins/v-dummy.js', '~/plugins/vee-validate.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -86,7 +81,7 @@ export default {
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3
+          success: colors.green.accent3,
         },
       },
     },
