@@ -5,7 +5,7 @@ import { ValidationProvider, ValidationObserver} from 'vee-validate';
 import rules from '@vee-validate/rules';
 import de from 'vee-validate/dist/locale/de';
 
-Validator.localize('en', de);
+Validator.localize('de', de);
 
 Vue.component('ValidationProvider', ValidationProvider);
 Vue.component("ValidationObserver", ValidationObserver);
