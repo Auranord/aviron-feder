@@ -1,0 +1,10 @@
+{
+  "name": "aviron-feder",
+  "short_name": "aviron-feder",
+  "description": "Description.",
+  "icons": [],
+  "start_url": "/aviron-feder/?standalone=true",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "lang": "de"
+}
