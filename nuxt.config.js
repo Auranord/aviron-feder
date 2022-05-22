@@ -5,7 +5,7 @@ export default {
   target: 'static',
 
   router: {
-    base: '/nuxt-test/'
+    base: '/aviron-feder/'
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
