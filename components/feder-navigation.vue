@@ -24,7 +24,7 @@
 
       <nuxt-link to="/" >
         <v-btn icon size="50px" >
-          <img class="home-logo" width="50px" alt="Home" src="/logo_512_c.svg">
+          <img src="~/static/logo_512_c.svg" width="50px" />
         </v-btn>
       </nuxt-link>
       <v-toolbar-title>
