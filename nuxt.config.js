@@ -9,7 +9,7 @@ export default {
     titleTemplate: '%s - aviron-feder',
     title: 'aviron-feder',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'de'
     },
     meta: [
       { charset: 'utf-8' },
