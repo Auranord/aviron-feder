@@ -20,8 +20,8 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
 
       <nuxt-link to="/" >
-        <v-btn icon size="28px" >
-          <v-icon size="28px" >mdi-home</v-icon>
+        <v-btn icon size="50px" >
+          <img class="home-logo" width="50px" alt="Home" src="/logo_512_c.svg">
         </v-btn>
       </nuxt-link>
       <v-toolbar-title> 
