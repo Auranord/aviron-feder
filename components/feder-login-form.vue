@@ -46,7 +46,12 @@ export default {
       })
     },
     login() {
-      console.log('Submitting!')
+      this.$auth.loginWith('local', {
+        data: {
+          email: this.email,
+          password: this.password
+        }
+      })
     },
   },
 }

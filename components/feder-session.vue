@@ -1,42 +1,34 @@
 <template>
   <div>
+
     <nuxt-link to="/register">
-      <v-btn v-if="!loggedin" text rounded class="my-2"> Registrieren </v-btn>
+      <v-btn v-if="!$auth.loggedIn" text rounded class="my-2"> Registrieren </v-btn>
     </nuxt-link>
 
     <nuxt-link to="/login">
-      <v-btn v-if="!loggedin" text rounded class="my-2"> Anmelden </v-btn>
+      <v-btn v-if="!$auth.loggedIn" text rounded class="my-2"> Anmelden </v-btn>
     </nuxt-link>
 
-    <v-btn v-if="loggedin" text rounded class="my-2" @click="logout">
+    <v-btn v-if="$auth.loggedIn" text rounded class="my-2">
+      {{ $auth.user }}
+    </v-btn>
+
+    <v-btn v-if="$auth.loggedIn" text rounded class="my-2" @click="$auth.logout()">
       Ausloggen
     </v-btn>
 
-    <nuxt-link v-if="loggedin" to="/account">
+    <nuxt-link v-if="$auth.loggedIn" to="/account">
       <v-btn icon>
         <v-icon>mdi-account</v-icon>
       </v-btn>
     </nuxt-link>
+
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      loggedin: false,
-    }
-  },
-  mounted() {
-    console.log(localStorage.getItem('Authorization'))
-    if (localStorage.getItem('Authorization') != null) this.loggedin = true
-  },
-  methods: {
-    logout() {
-      localStorage.removeItem('Authorization')
-      window.location.href = '/'
-    },
-  },
+
 }
 </script>
 

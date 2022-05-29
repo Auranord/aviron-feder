@@ -25,7 +25,7 @@
       <v-btn
         color="primary"
         :disabled="invalid || !validated"
-        @click.prevent="submit"
+        @click.prevent="register"
         >Sign Up</v-btn
       >
     </v-card-actions>
@@ -51,8 +51,15 @@ export default {
         this.$refs.obs.reset()
       })
     },
-    submit() {
-      console.log('Submitting!')
+    async register() {
+      const respone = await this.$axios.post('/register', {
+        email: this.email,
+        password: this.password
+      })
+      
+      if(respone.status === 200) {
+        this.$router.push({ name: 'index' })
+      }
     },
   },
 }
