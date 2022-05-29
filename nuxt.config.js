@@ -109,7 +109,7 @@ export default {
         endpoints: {
           login: { url: '/login', method: 'post' },
           logout: false,
-          user: false // { url: '/abakus/user/' , method: 'get' }
+          user: { url: '/abakus/user/' , method: 'get' }
         }
       }
     }
