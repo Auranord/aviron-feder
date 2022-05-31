@@ -52,13 +52,16 @@ export default {
       })
     },
     async register() {
-      const respone = await this.$axios.post('/register', {
-        email: this.email,
-        password: this.password
-      })
-      
-      if(respone.status === 200) {
+
+      try {
+        await this.$axios.post('/register', {
+          email: this.email,
+          password: this.password
+        })
+        this.$store.dispatch('snackbars/addSnackbar', { visible: true, type: 'success', text: 'Registrierung erfolgreich.', timeout: -1, })
         this.$router.push({ name: 'index' })
+      } catch (error) {
+        this.$store.dispatch('snackbars/addSnackbar', { visible: true, type: 'error', text: 'Registrierung nicht erfolgreich.', timeout: -1, })
       }
     },
   },

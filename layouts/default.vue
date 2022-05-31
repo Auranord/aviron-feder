@@ -9,15 +9,17 @@
     </v-main>
 
     <feder-footer />
+    <feder-snackbar />
   </v-app>
 </template>
 
 <script>
 import federFooter from '~/components/feder-footer.vue'
 import FederNavigation from '~/components/feder-navigation.vue'
+import FederSnackbar from '~/components/feder-snackbar.vue'
 export default {
   name: 'DefaultLayout',
-  components: { federFooter, FederNavigation },
+  components: { federFooter, FederNavigation, FederSnackbar },
   data() {
     return {
       clipped: false,
