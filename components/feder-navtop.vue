@@ -30,8 +30,8 @@ export default {
           title: 'Test Ausgaben',
           dropdownItems: [
             {
-              title: '-',
-              to: '/test',
+              title: 'Users',
+              to: '/users',
             },
           ],
         },
