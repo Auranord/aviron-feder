@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a){return {staticAssetsBase:"\u002Faviron-feder\u002F_nuxt\u002Fstatic\u002F1654184572",layout:"default",error:a,state:{snackbars:{snackbars:[]},auth:{user:a,loggedIn:false,strategy:"local"}},serverRendered:true,routePath:"\u002Flogin",config:{_app:{basePath:"\u002Faviron-feder\u002F",assetsPath:"\u002Faviron-feder\u002F_nuxt\u002F",cdnURL:a}}}}(null));
