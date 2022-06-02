@@ -43,6 +43,10 @@ export default {
     email: '',
     password: '',
   }),
+  mounted() {
+    if(this.$auth.loggedIn)
+      this.$router.push({ name: 'index' })
+  },
   methods: {
     clear() {
       this.email = this.password = this.confirm = ''

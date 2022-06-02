@@ -49,6 +49,10 @@ export default {
     password: '',
     confirm: '',
   }),
+  mounted() {
+    if(this.$auth.loggedIn)
+      this.$router.push({ name: 'index' })
+  },
   methods: {
     clear() {
       this.email = this.password = this.confirm = ''
@@ -65,7 +69,7 @@ export default {
           this.$store.dispatch('snackbars/addSnackbar', { visible: true, type: 'error', text: response.data.message, timeout: -1, })
         } else {
           this.$store.dispatch('snackbars/addSnackbar', { visible: true, type: 'success', text: 'Registrierung erfolgreich.', timeout: -1, })
-          this.$router.push({ name: 'HomePage' })
+          this.$router.push({ name: 'index' })
         }
     },
   },
