@@ -49,20 +49,20 @@ export default {
     },
     async login() {
       try {
-        await this.$auth.loginWith('local', {
+        const response = await this.$auth.loginWith('local', {
           data: {
             email: this.email,
             password: this.password
           }
         })
-        this.$store.dispatch('snackbars/addSnackbar', { visible: true, type: 'success', text: 'Login erfolgreich.', timeout: -1, })
+        if(response.data.error) {
+          this.$store.dispatch('snackbars/addSnackbar', { visible: true, type: 'error', text: response.data.message, timeout: -1, })
+        } else {
+          this.$store.dispatch('snackbars/addSnackbar', { visible: true, type: 'success', text: 'Login erfolgreich.', timeout: -1, })
+        }
       } catch (error) {
         this.$store.dispatch('snackbars/addSnackbar', { visible: true, type: 'error', text: 'Login nicht erfolgreich.', timeout: -1, })
       }
-
-
-      
-
     },
   },
 }
