@@ -4,7 +4,7 @@
       <v-card>
         <v-card-title class="headline"> Login Page </v-card-title>
         <v-card-text>
-          <feder-login-form />
+          <Feder-login-form />
         </v-card-text>
       </v-card>
     </v-col>
@@ -12,9 +12,11 @@
 </template>
 
 <script>
-import federLoginForm from '~/components/feder-login-form.vue'
+import FederLoginForm from '~/components/feder-login-form.vue'
 export default {
   name: 'LoginPage',
-  components: { federLoginForm },
+  components: { FederLoginForm },
 }
 </script>
+
+    FederApiHealthcheck

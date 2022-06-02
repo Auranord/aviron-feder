@@ -42,10 +42,10 @@ export default {
   components: {
     TextFieldValidated,
     PasswordFieldValidated,
+    FederApiHealthcheck,
   },
   data: () => ({
     email: '',
-    FederApiHealthcheck,
     password: '',
     confirm: '',
   }),

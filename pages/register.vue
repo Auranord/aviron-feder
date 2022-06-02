@@ -4,7 +4,7 @@
       <v-card>
         <v-card-title class="headline"> Registration Page </v-card-title>
         <v-card-text>
-          <feder-register-form />
+          <Feder-register-form />
         </v-card-text>
       </v-card>
     </v-col>
@@ -12,9 +12,9 @@
 </template>
 
 <script>
-import federRegisterForm from '~/components/feder-register-form.vue'
+import FederRegisterForm from '~/components/feder-register-form.vue'
 export default {
   name: 'RegistrationPage',
-  components: { federRegisterForm },
+  components: { FederRegisterForm },
 }
 </script>
