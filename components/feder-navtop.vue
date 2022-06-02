@@ -27,55 +27,10 @@ export default {
     return {
       navbarItems: [
         {
-          title: 'Test 1',
-          to: '/test',
+          title: 'Test Ausgaben',
           dropdownItems: [
             {
-              title: 'Test 4',
-              to: '/test',
-            },
-            {
-              title: 'Test 5',
-              to: '/test',
-            },
-            {
-              title: 'Test 6',
-              to: '/test',
-            },
-          ],
-        },
-        {
-          title: 'Test 2',
-          to: '/test',
-          dropdownItems: [
-            {
-              title: 'Test 4',
-              to: '/test',
-            },
-            {
-              title: 'Test 5',
-              to: '/test',
-            },
-            {
-              title: 'Test 6',
-              to: '/test',
-            },
-          ],
-        },
-        {
-          title: 'Test 3',
-          to: '/test',
-          dropdownItems: [
-            {
-              title: 'Test 4',
-              to: '/test',
-            },
-            {
-              title: 'Test 5',
-              to: '/test',
-            },
-            {
-              title: 'Test 16',
+              title: '-',
               to: '/test',
             },
           ],

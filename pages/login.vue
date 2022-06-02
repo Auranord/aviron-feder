@@ -2,7 +2,7 @@
   <v-row justify="center" align="center">
     <v-col cols="6">
       <v-card>
-        <v-card-title class="headline"> Login Test Page </v-card-title>
+        <v-card-title class="headline"> Login Page </v-card-title>
         <v-card-text>
           <feder-login-form />
         </v-card-text>
@@ -14,7 +14,7 @@
 <script>
 import federLoginForm from '~/components/feder-login-form.vue'
 export default {
-  name: 'IndexPage',
+  name: 'LoginPage',
   components: { federLoginForm },
 }
 </script>

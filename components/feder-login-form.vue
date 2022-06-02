@@ -1,32 +1,35 @@
 <template>
-  <ValidationObserver ref="obs" v-slot="{ invalid, validated, validate }">
-    <v-form>
-      <Text-field-validated
-        v-model="email"
-        rules="required|email"
-        label="E-mail"
-      />
-      <Password-field-validated
-        v-model="password"
-        rules="required"
-        label="Password"
-      />
-    </v-form>
+  <Feder-api-healthcheck>
+    <ValidationObserver ref="obs" v-slot="{ invalid, validated }">
+      <v-form>
+        <Text-field-validated
+          v-model="email"
+          rules="required|email"
+          label="E-mail"
+        />
+        <Password-field-validated
+          v-model="password"
+          rules="required"
+          label="Password"
+        />
+      </v-form>
 
-    <v-card-actions>
-      <v-btn @click="clear">Clear</v-btn>
-      <v-spacer></v-spacer>
-      <v-btn
-        color="primary"
-        :disabled="invalid || !validated"
-        @click.prevent="login"
-        >Login</v-btn
-      >
-    </v-card-actions>
-  </ValidationObserver>
+      <v-card-actions>
+        <v-btn @click="clear">Clear</v-btn>
+        <v-spacer></v-spacer>
+        <v-btn
+          color="primary"
+          :disabled="invalid || !validated"
+          @click.prevent="login"
+          >Login</v-btn
+        >
+      </v-card-actions>
+    </ValidationObserver>
+  </Feder-api-healthcheck>
 </template>
 
 <script>
+import FederApiHealthcheck from './feder-api-healthcheck.vue'
 import PasswordFieldValidated from './forms/PasswordField-validated.vue'
 import TextFieldValidated from './forms/TextField-validated.vue'
 
@@ -34,6 +37,7 @@ export default {
   components: {
     TextFieldValidated,
     PasswordFieldValidated,
+    FederApiHealthcheck,
   },
   data: () => ({
     email: '',

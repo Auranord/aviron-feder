@@ -23,8 +23,8 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
 
       <nuxt-link to="/" >
-        <v-btn icon size="50px" >
-          <img src="~/static/logo_512_color.svg" width="50px" />
+        <v-btn icon size="64px" >
+          <img src="~/static/logo_512_color.svg" width="48px" />
         </v-btn>
       </nuxt-link>
       <v-toolbar-title>
@@ -52,13 +52,8 @@ export default {
       drawerItems: [
         {
           icon: 'mdi-apps',
-          title: 'Welcome',
+          title: 'Home',
           to: '/',
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Test',
-          to: '/test',
         },
       ],
     }

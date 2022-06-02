@@ -1,16 +1,16 @@
 <template>
   <v-row justify="center">
-    <v-col cols="8">
+    <v-col cols="6">
       <v-card>
-        <v-card-title class="headline"> Index Test Page </v-card-title>
+        <v-card-title class="headline"> Home Page </v-card-title>
         <v-card-text>
-          <p v-dummy="1550"></p>
+          <p v-dummy="1200"></p>
         </v-card-text>
       </v-card>
     </v-col>
-    <v-col cols="4">
+    <v-col cols="3">
       <v-card>
-        <v-card-title class="headline"> Index Test Page </v-card-title>
+        <v-card-title class="headline"> Test </v-card-title>
         <v-card-text>
           <p v-dummy="150"></p>
         </v-card-text>
@@ -21,6 +21,6 @@
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'HomePage',
 }
 </script>

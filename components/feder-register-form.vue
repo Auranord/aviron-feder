@@ -1,37 +1,40 @@
 <template>
-  <ValidationObserver ref="obs" v-slot="{ invalid, validated, validate }">
-    <v-form>
-      <Text-field-validated
-        v-model="email"
-        rules="required|email"
-        label="E-mail"
-      />
-      <Password-field-validated
-        v-model="password"
-        rules="required"
-        label="Password"
-      />
-      <Password-field-validated
-        v-model="confirm"
-        :rules="'required|is:' + password"
-        label="Password bestätigen"
-      />
-    </v-form>
+  <Feder-api-healthcheck>
+    <ValidationObserver ref="obs" v-slot="{ invalid, validated }">
+      <v-form>
+        <Text-field-validated
+          v-model="email"
+          rules="required|email"
+          label="E-mail"
+        />
+        <Password-field-validated
+          v-model="password"
+          rules="required"
+          label="Password"
+        />
+        <Password-field-validated
+          v-model="confirm"
+          :rules="'required|is:' + password"
+          label="Password bestätigen"
+        />
+      </v-form>
 
-    <v-card-actions>
-      <v-btn @click="clear">Clear</v-btn>
-      <v-spacer></v-spacer>
-      <v-btn
-        color="primary"
-        :disabled="invalid || !validated"
-        @click.prevent="register"
-        >Sign Up</v-btn
-      >
-    </v-card-actions>
-  </ValidationObserver>
+      <v-card-actions>
+        <v-btn @click="clear">Clear</v-btn>
+        <v-spacer></v-spacer>
+        <v-btn
+          color="primary"
+          :disabled="invalid || !validated"
+          @click.prevent="register"
+          >Sign Up</v-btn
+        >
+      </v-card-actions>
+    </ValidationObserver>
+  </Feder-api-healthcheck>
 </template>
 
 <script>
+import FederApiHealthcheck from './feder-api-healthcheck.vue'
 import PasswordFieldValidated from './forms/PasswordField-validated.vue'
 import TextFieldValidated from './forms/TextField-validated.vue'
 
@@ -42,6 +45,7 @@ export default {
   },
   data: () => ({
     email: '',
+    FederApiHealthcheck,
     password: '',
     confirm: '',
   }),
@@ -61,7 +65,7 @@ export default {
           this.$store.dispatch('snackbars/addSnackbar', { visible: true, type: 'error', text: response.data.message, timeout: -1, })
         } else {
           this.$store.dispatch('snackbars/addSnackbar', { visible: true, type: 'success', text: 'Registrierung erfolgreich.', timeout: -1, })
-          this.$router.push({ name: 'index' })
+          this.$router.push({ name: 'HomePage' })
         }
     },
   },
