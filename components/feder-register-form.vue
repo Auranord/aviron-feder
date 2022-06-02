@@ -21,7 +21,6 @@
     <v-card-actions>
       <v-btn @click="clear">Clear</v-btn>
       <v-spacer></v-spacer>
-      <v-btn @click="validate">Validate</v-btn>
       <v-btn
         color="primary"
         :disabled="invalid || !validated"
@@ -54,17 +53,16 @@ export default {
       })
     },
     async register() {
-
-      try {
-        await this.$axios.post('/register', {
+        const response = await this.$axios.post('/register', {
           email: this.email,
           password: this.password
         })
-        this.$store.dispatch('snackbars/addSnackbar', { visible: true, type: 'success', text: 'Registrierung erfolgreich.', timeout: -1, })
-        this.$router.push({ name: 'index' })
-      } catch (error) {
-        this.$store.dispatch('snackbars/addSnackbar', { visible: true, type: 'error', text: 'Registrierung nicht erfolgreich.', timeout: -1, })
-      }
+        if(response.data.error) {
+          this.$store.dispatch('snackbars/addSnackbar', { visible: true, type: 'error', text: response.data.message, timeout: -1, })
+        } else {
+          this.$store.dispatch('snackbars/addSnackbar', { visible: true, type: 'success', text: 'Registrierung erfolgreich.', timeout: -1, })
+          this.$router.push({ name: 'index' })
+        }
     },
   },
 }

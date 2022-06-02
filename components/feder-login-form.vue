@@ -16,7 +16,6 @@
     <v-card-actions>
       <v-btn @click="clear">Clear</v-btn>
       <v-spacer></v-spacer>
-      <v-btn @click="validate">Validate</v-btn>
       <v-btn
         color="primary"
         :disabled="invalid || !validated"
