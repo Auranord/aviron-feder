@@ -6,7 +6,7 @@
         rules="required|email"
         label="E-mail"
       />
-      <Text-field-validated
+      <Password-field-validated
         v-model="password"
         rules="required"
         label="Password"
@@ -28,11 +28,13 @@
 </template>
 
 <script>
+import PasswordFieldValidated from './forms/PasswordField-validated.vue'
 import TextFieldValidated from './forms/TextField-validated.vue'
 
 export default {
   components: {
     TextFieldValidated,
+    PasswordFieldValidated,
   },
   data: () => ({
     email: '',
