@@ -33,6 +33,10 @@ export default {
               title: 'Users',
               to: '/users',
             },
+            {
+              title: 'Figures',
+              to: '/figures',
+            },
           ],
         },
       ],

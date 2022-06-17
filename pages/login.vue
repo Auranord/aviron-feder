@@ -18,5 +18,3 @@ export default {
   components: { FederLoginForm },
 }
 </script>
-
-    FederApiHealthcheck

@@ -1,6 +1,7 @@
 export const state = () => ({
     healthcheck: true,
     users: [],
+    figures: [],
 })
   
 export const mutations = {
@@ -9,6 +10,9 @@ export const mutations = {
     },
     SET_USERS (state, users) {
         state.users = users
+    },
+    SET_FIGURES (state, figures) {
+        state.figures = figures
     },
 }
 
@@ -24,6 +28,10 @@ export const actions = {
     async loadUsers({commit}) {
         const response = await this.$axios.get('/abakus/user/all')
         commit('SET_USERS', response.data)
+    },
+    async loadFigures({commit}) {
+        const response = await this.$axios.get('/abakus/figure/all')
+        commit('SET_FIGURES', response.data)
     },
 }
 
