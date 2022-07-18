@@ -3,7 +3,7 @@
         <section>
             <v-parallax :src="require('@/static/gammeligeBurg.png')" height="400">
                 <v-layout column align-center justify-center>
-                    <img src="~/static/logo_512_color.svg" width="300px"/>
+                    <img src="/logo_512_color.svg" width="300px"/>
                     <h1 
                         class="white--text mb-5 text-xs-center" 
                         style="font-weight: 900"
@@ -72,16 +72,16 @@ export default {
     return {
       promoImages: [
         {
-          src: "~/static/gammeligeBurg.png",
+          src: "/gammeligeBurg.png",
         },
         {
-          src: "~/static/gammeligeBurg.png",
+          src: "/gammeligeBurg.png",
         },
         {
-          src: "~/static/gammeligeBurg.png",
+          src: "/gammeligeBurg.png",
         },
         {
-          src: "~/static/gammeligeBurg.png",
+          src: "/gammeligeBurg.png",
         },
       ],
     }
